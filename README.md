@@ -6,6 +6,9 @@
 2. Docker Download
 3. Docker Compose Download
 
+## Git 설치 방법
+[Linux Git Download](https://medium.com/@dassandeep0001/how-to-install-git-in-ec2-instance-1bfeb1cc9dc9)
+
 ## Docker 설치 방법
 [Amazon Linux 2024 Download for Docker](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
 __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 이용할 것
