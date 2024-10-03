@@ -12,3 +12,6 @@ __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 
 
 ## Docker Compose 설치 방법
 [Amazon Linux 2024 Download for Docker Compose](https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9)
+
+## Amazon Corretto Download
+[JAVA 21 설치 정리](https://blog.eomsh.com/211)
