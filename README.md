@@ -18,6 +18,8 @@ __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 
 
 ## Amazon Corretto Download
 [JAVA 21 설치 정리](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/amazon-linux-install.html)
+[자바 환경변수 설정](https://velog.io/@hyeongbin/Linux-JAVA-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
 
 ## ※주의 사항※
-`docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않은 관계로, `./gradlew clean build`를 한번 진행할 것
+1. `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않은 관계로, `./gradlew clean build`를 한번 진행할 것
+2. `./gradlew clean build` 진행하기 전 `chmod +x gradlew` 사전 진행 필요
