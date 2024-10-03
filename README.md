@@ -14,4 +14,4 @@ __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 
 [Amazon Linux 2024 Download for Docker Compose](https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9)
 
 ## Amazon Corretto Download
-[JAVA 21 설치 정리](https://blog.eomsh.com/211)
+[JAVA 21 설치 정리](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/amazon-linux-install.html)
