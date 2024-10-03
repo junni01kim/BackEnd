@@ -5,3 +5,7 @@
 1. IntelliJ와 동일한 JDK를 일치시킨다. (현재 correntto-21)
 2. Docker Download
 3. Docker Compose Download
+
+## Docker 설치 방법
+[Amazon Linux 2024 Download](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
+__링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 이용할 것
