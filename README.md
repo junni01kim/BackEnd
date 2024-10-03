@@ -7,8 +7,8 @@
 3. Docker Compose Download
 
 ## Docker 설치 방법
-[Amazon Linux 2024 Download](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
+[Amazon Linux 2024 Download for Docker](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
 __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 이용할 것
 
 ## Docker Compose 설치 방법
-[Amazon Linux 2024 Download](https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9)
+[Amazon Linux 2024 Download for Docker Compose](https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9)
