@@ -31,7 +31,7 @@ services:
       - "../mariadb/data:/var/lib/mysql"
     environment:
       MARIADB_DATABASE: projectdb
-      MARIADB_USER: project
+      MARIADB_USER: user1234
       MARIADB_PASSWORD: user1234
       MARIADB_ROOT_PASSWORD: user1234
     networks:

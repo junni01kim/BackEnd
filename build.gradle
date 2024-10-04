@@ -22,6 +22,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+	// for JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
 	// for RESTful
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -35,6 +38,12 @@ dependencies {
 
 	// for Swagger Ui
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+	// for Spring Security Crypto
+	implementation 'org.springframework.security:spring-security-crypto'
+
+	// for MariaDB
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 tasks.named('test') {
