@@ -45,7 +45,3 @@ dependencies {
 	// for MariaDB
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 }
-
-tasks.named('test') {
-	useJUnitPlatform()
-}
