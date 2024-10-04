@@ -40,9 +40,5 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 	// for MariaDB
-	implementation 'org.mariadb.jdbc:mariadb-java-client'
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 }

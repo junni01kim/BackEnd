@@ -32,7 +32,7 @@ services:
     environment:
       MARIADB_DATABASE: projectdb
       MARIADB_USER: project
-      MARIADB_PASSWORD: user1234
+      MARIADB_PASSWORD: user
       MARIADB_ROOT_PASSWORD: user1234
     networks:
       - project
