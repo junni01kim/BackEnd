@@ -36,5 +36,23 @@ services:
     networks:
       - project
 
+  mariadb:
+# DataBase 포트번호: 3306
+    container_name: "maria_db"
+    image: mariadb:10
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - "../mariadb/conf.d:/etc/mysql/conf.d"
+      - "../mariadb/data:/var/lib/mysql"
+    environment:
+      MARIADB_DATABASE: projectdb
+      MARIADB_USER: project
+      MARIADB_PASSWORD: user1234
+      MARIADB_ROOT_PASSWORD: user1234
+    networks:
+      - project
+
 networks:
   project:
