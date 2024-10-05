@@ -29,6 +29,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.34' // (2024-09-29 기준) 가장 최신 버전
 	annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
+	// for Spring Security Crypto
+	implementation 'org.springframework.security:spring-security-crypto'
+
 	// for Swagger Ui
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
 
