@@ -25,10 +25,12 @@ public class TestService {
     }
 
     public User signup(Signup signup) {
-        return User.builder()
+        var user = User.builder()
                 .nickname(signup.getNickname())
                 .userId(signup.getId())
                 .encodedPwd(signup.getPassword())
                 .build();
+        userRepository.save(user);
+        return user;
     }
 }
