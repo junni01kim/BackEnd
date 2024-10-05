@@ -1,6 +1,7 @@
 package com.daou.test;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,11 +30,13 @@ public class TestService {
     }
 
     public User signup(Signup signup) {
-        return User.builder()
+        var user = User.builder()
                 .nickname(signup.getNickname())
                 .userId(signup.getId())
                 .encodedPwd(getEncodedPwd(signup.getPassword()))
                 .build();
+        userRepositoty.save(user);
+        return user;
     }
 
     public String getEncodedPwd(String password) {
