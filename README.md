@@ -1,6 +1,6 @@
 # Spring Boot와 Docker Compose를 이용한 베이스 백엔드 서버
 ### 구축 사항
-1. 자체 로그인
+1. 자체 로그인 (java security)
 2. Swagger Ui
 3. MariaDb
 4. Spring Boot
