@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://maria_db:3306/projectdb
+    url: jdbc:mariadb://maria_db:3306/projectdb?createDatabaseIfNotExist=true
     username: root
     password: root1234
     driver-class-name: org.mariadb.jdbc.Driver
