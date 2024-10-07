@@ -32,3 +32,4 @@ __링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 
 ## ※주의 사항※
 1. `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않은 관계로, `./gradlew clean build`를 한번 진행할 것
 2. `./gradlew clean build` 진행하기 전 `chmod +x gradlew` 사전 진행 필요
+3. 127.0.0.0 데이터베이스 접근 불가로, ip 개방 코드 mariadb sql 작성 필요.
