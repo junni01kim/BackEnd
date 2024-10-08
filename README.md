@@ -14,6 +14,15 @@
 
 ## Git 설치 방법
 [Linux Git Download](https://medium.com/@dassandeep0001/how-to-install-git-in-ec2-instance-1bfeb1cc9dc9)
+```
+sudo yum update -y
+
+sudo yum install git -y
+
+git — version
+
+git config — global user.name “Your Name”
+```
 
 ## Docker 설치 방법
 [Amazon Linux 2024 Download for Docker](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
