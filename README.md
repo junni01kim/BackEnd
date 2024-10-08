@@ -26,7 +26,22 @@ git config — global user.name “Your Name”
 
 ## Docker 설치 방법
 [Amazon Linux 2024 Download for Docker](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
-__링크만으론 sudo 없이 docker ps 사용안됨__ 이후 `$ newgrp docker` 이용할 것
+__링크만으론 sudo 없이 docker ps 사용안됨__  
+이후 `$ newgrp docker` 이용할 것
+```
+sudo yum update -y
+
+# Amazon Linux 2023의 경우
+sudo yum install -y docker
+
+sudo service docker start
+
+sudo usermod -a -G docker ec2-user
+
+newgrp docker
+
+docker ps
+```
 
 ## Docker Compose 설치 방법
 [Amazon Linux 2024 Download for Docker Compose](https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9)
