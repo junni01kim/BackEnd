@@ -7,7 +7,7 @@
 
 ※ Base_FrontEnd 구현 필요
 1. 현재 샘플코드로 `Flask`를 이용한 기본적인 프론트 서버 환경만 작성되어있다. [(링크)](https://github.com/junni01kim/FrontEnd)
-2. 해당 코드는 Docker 공식문서의 기본 `Dockerfile`이다.
+2. 해당 코드는 [Docker 공식문서](https://docs.docker.com/compose/gettingstarted/)의 기본 `Dockerfile`이다.
 
 # AWS 개설 후 해야할 것
 1. IntelliJ와 동일한 JDK를 일치시킨다. (현재 correntto-21)
@@ -145,7 +145,7 @@ git clone https://github.com/junni01kim/FrontEnd.git
 cd ~/BackEnd/
 
 # `./gradlew` 실행 기준 처음에만 실행한다.
-# gradlew 실행 권한(+x) 추가
+# gradlew 실행 권한(+x) 추가 (추후 repo 단계에서 수정 예정)
 chmod +x ./gradlew 
 
 # docker-compose가 실행되어 있다면, 전부 종료
@@ -160,6 +160,8 @@ docker-compose up -d
 ```
 
 ## BackEnd DB접근 오류 (초기 1회 127.*.0.* 권한 없음)
+1. 최초 실행 시, `127.*.0.*` 데이터베이스 접근 불가로, 접속 ip 개방 SQL 코드 작성이 필요하다.
+2. `image`를 통해 `mariadb`가 생성되면, 필요한 설정되지 않은 채로 개설되기 때문이다. (추후 수정 예정)
 ```bash
 # mariadb docker 실행 상태에서 진행
 # BackEnd는 Error 발생으로 exit(1)된 상태이다.
@@ -180,7 +182,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root1234' WITH GRANT OP
 ```
 
 ## ※주의 사항※
-2. `./gradlew clean build` 진행하기 전 `chmod +x gradlew` 사전 진행 필요
-   - 처음 파일을 받으면, gradlew 파일에 실행 권한이 존재하지 않기 때문이다. (추후 repo 단계에서 수정 예정)
-3. __※중요※__ ec2 프리티어 t2.micro는 도커 실행 시 __인스턴스 과부하로__ 작동이 멈추기 때문에, 멈췄다면 __인스턴스 중지__ 후 __다시 시작__ 해야 한다.
-4. 127.*.0.* 데이터베이스 접근 불가로, ip 개방 SQL 코드 작성 필요.
+__※중요※__
+ec2 프리티어 t2.micro는 도커 실행 시 __인스턴스 과부하로__ 작동이 멈추기 때문에, 멈췄다면 __인스턴스 중지__ 후 __다시 시작__ 해야 한다.
+
