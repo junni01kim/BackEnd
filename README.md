@@ -99,6 +99,22 @@ docker-compose down
 docker-compose up -d
 ```
 
+## BackEnd DB접근 오류 (초기 1회 127.0.0.0 권한 없음)
+```
+# mariadb docker 실행 상태에서 진행
+docker ps
+
+docker exec -it maria_db /bin/bash
+
+mariadb -u root -p 
+# 비밀번호는 생략(Enter)
+
+use mysql;
+select user, host from user;
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root1234' WITH GRANT OPTION;
+```
+
 ## ※주의 사항※
 1. repository clone을 했다면, `./gradlew clean build`를 한번 진행할 것
    - `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않기 때문이다.
