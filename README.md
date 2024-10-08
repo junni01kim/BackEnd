@@ -74,9 +74,35 @@ export JAVA_HOME=/home/ec2-user/JAVA21
 
 $JAVA_HOME/bin/javac -version
 ```
-   
+
+## 깃 클론
+백엔드 다운로드
+```
+git clone https://github.com/junni01kim/BackEnd.git
+```
+
+프론트엔드 다운로드(임시)
+```
+git clone https://github.com/junni01kim/FrontEnd.git
+```
+
+## 프로젝트 실행
+```
+cd ~/BackEnd/
+
+chmod +x ./gradlew # 한번만
+
+docker-compose down
+
+./gradlew clean build
+
+docker-compose up -d
+```
 
 ## ※주의 사항※
-1. `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않은 관계로, `./gradlew clean build`를 한번 진행할 것
+1. repository clone을 했다면, `./gradlew clean build`를 한번 진행할 것
+   - `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않기 때문이다.
 2. `./gradlew clean build` 진행하기 전 `chmod +x gradlew` 사전 진행 필요
-3. 127.0.0.0 데이터베이스 접근 불가로, ip 개방 코드 mariadb sql 작성 필요.
+   - 처음 파일을 받으면, gradlew 파일에 실행 권한이 존재하지 않기 때문이다. (추후 repo 단계에서 수정 예정)
+3. __※중요※__ ec2 프리티 t2.micro는 도커 실행 시 __인스턴스 과부하로__ 작동이 멈추기 때문에, 멈췄다면 __인스턴스 중지__ 후 __다시 시작__ 해야 한다.
+4. 127.0.0.0 데이터베이스 접근 불가로, ip 개방 코드 mariadb sql 작성 필요.
