@@ -56,9 +56,23 @@ docker-compose version
 ## Amazon Corretto Download
 [JAVA 21 설치 정리](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html)
 1. tar파일 압축 해제
-   
+2. Java 파일 위치 지정
+```
+curl -LO https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.tar.gz
+
+tar -zxvf amazon-corretto-21-x64-linux-jdk.tar.gz
+
+mv amazon-corretto-21.0.4.7.1-linux-x64/ JAVA21/
+```
+
 [자바 환경변수 설정](https://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_$JAVA_HOME_%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98_%EC%84%A4%EC%A0%95#google_vignette)
 1. 압축 해제된 파일 위치에 환경변수 설정
+```
+export JAVA_HOME=/home/ec2-user/JAVA21
+
+$JAVA_HOME/bin/javac -version
+```
+   
 
 ## ※주의 사항※
 1. `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않은 관계로, `./gradlew clean build`를 한번 진행할 것
