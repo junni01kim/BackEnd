@@ -41,6 +41,7 @@ sudo yum install -y docker
 
 # Docker 서비스 실행
 sudo service docker start
+```
 
 # Docker 서비스 상시 실행 Docker Compose를 이용한 베이스 백엔드 서버
 ### 구축 사항
@@ -74,8 +75,7 @@ git — version
 
 ## Docker 설치 방법
 [Amazon Linux 2024 Download for Docker](https://docs.aws.amazon.com/ko_kr/serverless-application-model/latest/developerguide/install-docker.html)
-__링크만으론 sudo 없이 docker ps 사용안됨__  
-이후 `$ newgrp docker` 이용할 것
+__※ 링크만으론 `sudo` 없이 `docker ps` 사용안됨__  
 ```bash
 # 모든 패키지를 업데이트
 sudo yum update -y 
@@ -152,6 +152,7 @@ chmod +x ./gradlew
 docker-compose down
 
 # 새로운 JAR 파일 생성
+# `docker-compose up -d` 이전 `grrdle`에 Jar파일이 생성되지 않기 때문에, `docker-compose up` 이전에 필수적으로 진행해야 하는 작업
 ./gradlew clean build
 
 # 새로운 JAR 파일을 `image`화 후 실행
@@ -179,8 +180,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root1234' WITH GRANT OP
 ```
 
 ## ※주의 사항※
-1. repository clone을 했다면, `./gradlew clean build`를 한번 진행할 것
-   - `docker-compose up -d` 이전 그래들에 Jar파일이 생성되지 않기 때문이다.
 2. `./gradlew clean build` 진행하기 전 `chmod +x gradlew` 사전 진행 필요
    - 처음 파일을 받으면, gradlew 파일에 실행 권한이 존재하지 않기 때문이다. (추후 repo 단계에서 수정 예정)
 3. __※중요※__ ec2 프리티어 t2.micro는 도커 실행 시 __인스턴스 과부하로__ 작동이 멈추기 때문에, 멈췄다면 __인스턴스 중지__ 후 __다시 시작__ 해야 한다.
