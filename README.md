@@ -63,6 +63,8 @@ curl -LO https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.
 tar -zxvf amazon-corretto-21-x64-linux-jdk.tar.gz
 
 mv amazon-corretto-21.0.4.7.1-linux-x64/ JAVA21/
+
+rm amazon-corretto-21-x64-linux-jdk.tar.gz
 ```
 
 [자바 환경변수 설정](https://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_$JAVA_HOME_%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98_%EC%84%A4%EC%A0%95#google_vignette)
