@@ -1,12 +1,7 @@
 package com.daou.test;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import jakarta.persistence.*;
+import lombok.*;
 
 @Data
 @Builder
@@ -15,18 +10,18 @@ import jakarta.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "user")
-public class User {
+@Table(name = "test")
+public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
-    private String nickname;
+    private String testParam1;
 
     @Column(unique = true, nullable = false)
-    private String userId;
+    private String testParam2;
 
     @Column(nullable = false)
-    private String encodedPwd;
+    private String testParam3;
 }
